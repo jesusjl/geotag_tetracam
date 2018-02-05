@@ -16,14 +16,14 @@ def list_csv(input_folder, csv_file_name):
 
 
 
-def geotag_file(input_folder, csv_list, ext):
+def geotag_file(input_folder, csv_list, ext = "TIF"):
     """
         Geotag files. Require a path to the folder containing the images, the list returned by list_csv function and the images extension.
         Invalid tags should be removed before saving metadata to avoid errors.
     """
     for item in list(csv_list):
         try:
-            filename = item[0]
+            filename = item[0][:-4]
             abs_input_file_path = os.path.join(input_folder, filename + "." + ext)
             exif = GExiv2.Metadata(abs_input_file_path)
             exif.clear_tag('Exif.Image.Compression')  # remove invalid tag
