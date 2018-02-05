@@ -18,7 +18,7 @@ def list_csv(input_folder, csv_file_name):
 def geotag_file(input_folder, csv_list, ext):
         """
             Geotag files. Require a path to the folder containing the images, the list returned by list_csv function and the images extension.
-            Invalid tags should be removed before hand to avoud error when saving metadata.
+            Invalid tags should be removed before saving metadata to avoid errors.
         """
     for item in list(csv_list):
         try:
