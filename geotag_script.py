@@ -15,13 +15,6 @@ def list_csv(input_folder, csv_file_name):
     return csv_list
 
 
-
-
-
-#input_folder = "/media/jesus/Windows/Users/asterisko/Documents/CODE/geotag/TIFF_AUK"
-#output_folder = "/media/jesus/Windows/Users/asterisko/Documents/CODE/geotag/TIFF_AUK_GEO/"
-rel_path = '/TIFF_AUK/'
-
 def geotag_file(input_folder, csv_list, ext):
         """
             Geotag files. Require a path to the folder containing the images, the list returned by list_csv function and the images extension.
