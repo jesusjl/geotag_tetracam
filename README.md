@@ -5,7 +5,7 @@ The script Works only in linux as gexiv2 has not been ported to Windows.
 Invalid tags should be removed before saving metadata to avoid errors.
 E.g. `exif.clear_tag('Exif.Image.Compression')`
 
-Require a GPX file from PixelWrench2. Currently is only tested with TIF file but should work with other formats.
+Require a GPX file from PixelWrench2. Should work with other formats such jpg.
 
 
 Example:
@@ -19,7 +19,7 @@ image_extension = image_extension # TIFF
 
 l = list_csv(path_to_csv_folder, csv_file_name, image_extension)
 
-geotag_file(path_to_images_folder, l, )
+geotag_file(path_to_images_folder, l, "TIF")
 
 ```
 
